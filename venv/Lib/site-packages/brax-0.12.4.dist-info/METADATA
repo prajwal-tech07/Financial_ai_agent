@@ -1,0 +1,366 @@
+Metadata-Version: 2.4
+Name: brax
+Version: 0.12.4
+Summary: A differentiable physics engine written in JAX.
+Project-URL: Homepage, http://github.com/google/brax
+Author-email: Brax Authors <no-reply@google.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+License-File: LICENSE
+Keywords: JAX,physics,reinforcement learning,rigidbody
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Requires-Dist: absl-py
+Requires-Dist: dataclasses; python_version < '3.7'
+Requires-Dist: etils
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: flax
+Requires-Dist: jax>=0.4.6
+Requires-Dist: jaxlib>=0.4.6
+Requires-Dist: jaxopt
+Requires-Dist: jinja2
+Requires-Dist: ml-collections
+Requires-Dist: mujoco
+Requires-Dist: mujoco-mjx
+Requires-Dist: numpy
+Requires-Dist: optax
+Requires-Dist: orbax-checkpoint
+Requires-Dist: pillow
+Requires-Dist: scipy
+Requires-Dist: tensorboardx
+Requires-Dist: trimesh
+Requires-Dist: typing-extensions
+Provides-Extra: develop
+Requires-Dist: dm-env; extra == 'develop'
+Requires-Dist: gym; extra == 'develop'
+Requires-Dist: pytest; extra == 'develop'
+Requires-Dist: transforms3d; extra == 'develop'
+Description-Content-Type: text/markdown
+
+<img src="https://github.com/google/brax/raw/main/docs/img/brax_logo.gif" width="336" height="80" alt="BRAX"/>
+
+Brax is a fast and fully differentiable physics engine used for research and
+development of robotics, human perception, materials science, reinforcement
+learning, and other simulation-heavy applications.
+
+Brax is written in [JAX](https://github.com/google/jax) and is designed for use
+on acceleration hardware. It is both efficient for single-device simulation, and
+scalable to massively parallel simulation on multiple devices, without the need
+for pesky datacenters.
+
+<img src="https://github.com/google/brax/raw/main/docs/img/humanoid_v2.gif" width="160" height="160"/><img src="https://github.com/google/brax/raw/main/docs/img/a1.gif" width="160" height="160"/><img src="https://github.com/google/brax/raw/main/docs/img/ant_v2.gif" width="160" height="160"/><img src="https://github.com/google/brax/raw/main/docs/img/ur5e.gif" width="160" height="160"/>
+
+Brax simulates environments at millions of physics steps per second on TPU, and includes a suite of learning algorithms that train agents in seconds
+to minutes:
+
+*   Baseline learning algorithms such as
+    [PPO](https://github.com/google/brax/blob/main/brax/training/agents/ppo),
+    [SAC](https://github.com/google/brax/blob/main/brax/training/agents/sac),
+    [ARS](https://github.com/google/brax/blob/main/brax/training/agents/ars), and
+    [evolutionary strategies](https://github.com/google/brax/blob/main/brax/training/agents/es).
+*   Learning algorithms that leverage the differentiability of the simulator, such as [analytic policy gradients](https://github.com/google/brax/blob/main/brax/training/agents/apg).
+
+## One API, Four Pipelines
+
+Brax offers four distinct physics pipelines that are easy to swap:
+
+* [MuJoCo XLA - MJX](https://mujoco.readthedocs.io/en/stable/mjx.html) - a JAX
+reimplementation of the MuJoCo physics engine.
+* [Generalized](https://github.com/google/brax/blob/main/brax/generalized/)
+calculates motion in [generalized coordinates](https://en.wikipedia.org/wiki/Generalized_coordinates)
+using dynamics algorithms similar to [MuJoCo](https://mujoco.org/) and [TDS](https://github.com/erwincoumans/tiny-differentiable-simulator).
+* [Positional](https://github.com/google/brax/blob/main/brax/positional/)
+uses [Position Based Dynamics](https://matthias-research.github.io/pages/publications/posBasedDyn.pdf),
+a fast but stable method of resolving joint and collision constraints.
+* [Spring](https://github.com/google/brax/blob/main/brax/spring/) provides
+fast and cheap simulation for rapid experimentation, using simple impulse-based
+methods often found in video games.
+
+These pipelines share the same API and can run side-by-side within the same
+simulation.  This makes Brax well suited for experiments in transfer learning
+and closing the gap between simulation and the real world.
+
+## Quickstart: Colab in the Cloud
+
+Explore Brax easily and quickly through a series of colab notebooks:
+
+* [Brax Basics](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb) introduces the Brax API, and shows how to simulate basic physics primitives.
+* [Brax Training](https://colab.research.google.com/github/google/brax/blob/main/notebooks/training.ipynb) introduces Brax's training algorithms, and lets you train your own policies directly within the colab. It also demonstrates loading and saving policies.
+* [Brax Training with MuJoCo XLA - MJX](https://colab.sandbox.google.com/github/google-deepmind/mujoco/blob/main/mjx/tutorial.ipynb) demonstrates training in Brax using the `MJX` physics simulator.
+* [Brax Training with PyTorch on GPU](https://colab.research.google.com/github/google/brax/blob/main/notebooks/training_torch.ipynb) demonstrates how Brax can be used in other ML frameworks for fast training, in this case PyTorch.
+
+## Using Brax Locally
+
+To install Brax from pypi, install it with:
+
+```
+python3 -m venv env
+source env/bin/activate
+pip install --upgrade pip
+pip install brax
+```
+
+You may also install from [Conda](https://docs.conda.io/en/latest/) or [Mamba](https://github.com/mamba-org/mamba):
+
+```
+conda install -c conda-forge brax  # s/conda/mamba for mamba
+```
+
+Alternatively, to install Brax from source, clone this repo, `cd` to it, and then:
+
+```
+python3 -m venv env
+source env/bin/activate
+pip install --upgrade pip
+pip install -e .
+```
+
+To train a model:
+
+```
+learn
+```
+
+Training on NVidia GPU is supported, but you must first install
+[CUDA, CuDNN, and JAX with GPU support](https://github.com/google/jax#installation).
+
+## Learn More
+
+For a deep dive into Brax's design and performance characteristics, please see
+our paper, [Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation
+](https://arxiv.org/abs/2106.13281), which appeared in the [Datasets and Benchmarks Track](https://neurips.cc/Conferences/2021/CallForDatasetsBenchmarks) at [NeurIPS 2021](https://nips.cc/Conferences/2021).
+
+## Citing Brax
+
+If you would like to reference Brax in a publication, please use:
+
+```
+@software{brax2021github,
+  author = {C. Daniel Freeman and Erik Frey and Anton Raichuk and Sertan Girgin and Igor Mordatch and Olivier Bachem},
+  title = {Brax - A Differentiable Physics Engine for Large Scale Rigid Body Simulation},
+  url = {http://github.com/google/brax},
+  version = {0.12.4},
+  year = {2021},
+}
+```
+
+## Acknowledgements
+
+Brax has come a long way since its original publication.  We offer gratitude and
+effusive praise to the following people:
+
+* Manu Orsini and Nikola Momchev who provided a major refactor of Brax's
+training algorithms to make them more accessible and reusable.
+* Erwin Coumans who has graciously offered advice and mentorship, and many
+useful references from [Tiny Differentiable Simulator](https://github.com/erwincoumans/tiny-differentiable-simulator).
+* Baruch Tabanpour, a colleague who helped launch brax v2 and overhauled the contact library.
+* [Shixiang Shane Gu](https://sites.google.com/corp/view/gugurus) and [Hiroki Furuta](https://frt03.github.io/), who contributed BIG-Gym and Braxlines, and a scene composer to Brax.
+* Our awesome [open source collaborators and contributors](https://github.com/google/brax/graphs/contributors).  Thank you!
