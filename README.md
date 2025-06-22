@@ -148,4 +148,8 @@ git push origin feature/amazing-feature
 - YFinance – Financial market data
 - DuckDuckGo – News search
 
+## Screenshots
+![Screenshot 2025-06-22 210226](https://github.com/user-attachments/assets/dd308c2c-b8ef-4a60-90c3-cda6e822d0d4)
+![Screenshot 2025-06-22 210241](https://github.com/user-attachments/assets/ef3b528c-37c2-408f-aade-6acdf7ea7773)
+
 
